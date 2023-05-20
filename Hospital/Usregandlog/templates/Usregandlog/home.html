@@ -1,0 +1,17 @@
+{% extends 'main.html' %} {% block content %}
+
+<h1>Home Page</h1>
+
+<div>
+    <div>
+        <a href="{% url 'create-room' %}">Register</a> {%for room in rooms%}<br><br><br>
+        <div>
+            <p style="border: 1px solid block;">ROOM ID: <span style="text-decoration: wavye;">{{room.id}}</span><br> PATIENT NAME : <span style="text-decoration: wavye;">{{room.name}}</span> <br> FATHER NAME : <span style="text-decoration: wavye;">{{room.Father_name}}</span> <br> BIRTHDAY
+                : <span style="text-decoration: wavye;">{{room.DOB}}</span> <br> GENDER : <span style="text-decoration: wavye;">{{room.sex}}</span> <br> PHONE NUMBER : <span style="text-decoration: wavye;">{{room.phone_num}}</span></p>
+        </div>
+        <hr> {% endfor %}
+    </div>
+
+</div>
+
+{%endblock%}
